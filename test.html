@@ -17,10 +17,24 @@
             .lab_container{
               width: 80%;
             }
+            .mark {
+                background-color: rgb(0, 35, 232);
+                color: rgb(238, 246, 24);
+            }
+            .bg1 {
+                float: right;
+                width: 50%;
+                background-color: gold;
+            }
+            .bg2 {
+                float: left;
+                width: 50%;
+                background-color: orangered;
+            }
         </style> 
     </head>
     <body>
-        <div class="center_lab">
+        <div class="center_lab" id="section1">
             <div class="lab_container" align="justify">
                 <img src='page_history.jpg' width='300' height=auto></img>
                 <img src='page_history.jpg' width='300' height=auto></img>
@@ -37,7 +51,27 @@
                 <b>bold</b>
                 <strong>strong</strong>
                 <i>italic</i>
-                <p>hooooooo</p>
+                <ins class="mark">ins</ins>
+                <del class="mark">del</del>
+                <p>
+                    <div class="bg1">
+                        <ol>
+                            <li>first</li>
+                            <li>second</li>
+                        </ol>
+                    </div>
+                    <div class="bg2">
+                        <ol>
+                            <li>first</li>
+                            <li>second</li>
+                        </ol>
+                    </div>
+                </p>
+                <p>
+                    <a href="mailto: t110590001@ntut.org.tw">send mail</a>
+                    <a href="tel: +4733378901">+47 333 78 901</a>
+                    <a href="#section1">go to section 1</a>
+                </p>
             </div>
         </div>
     </body>
