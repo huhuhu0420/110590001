@@ -14,57 +14,33 @@
 <html>
 
 <head>
+    <link rel=stylesheet type="text/css" href="all.css">
     <title>kirby</title>
-    <style>
-        /*  CSS  */
-        .division1{
-            width:50%;
-            height:100px;
-            float:left;
-        }
-        .division2{
-            width:50%;
-            height:100px;
-            float:right;
-        }
-        .center_lab{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-        }
-        hr.new3 {
-            border-top: 1px dotted red;
-        }
-        hr.new4 {
-            border: 1px solid blueviolet;
-        }
-        nav a:hover {
-            background-color: rgb(115, 115, 115);
-            color: white;
-        }
-        nav > ul {
-            list-style: none;   /* 移除項目符號 */
-            margin: 0;
-            padding: 0;
-        }
-        .nav li {
-            display: inline;
-        }
-
-    </style>
 </head>
 
 <body style="background-color:#ffc5cf;">
     <!-- Don't forget to submit HTML file to your GitHub repository -->
     <!-- Write your code here -->
     <div >
+        <div class="center_lab">
+            <nav>
+                <ul class="nav">
+                    <li><a href="lab02.html">MainPage</a></li>
+                    <li><a href="second.html">222</a></li>
+                    <li><a href="third.html">333</a></li>
+                    <li><a href="forth.html">444</a></li>
+                    <li><a href="test.html">test</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
         <div id="firstDivistion" class="division1">
-            <a href="https://www.google.com/search?q=kirby&client=firefox-b-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjC75_c48j6AhVUeN4KHZOUDB0Q_AUoAXoECAIQAw&biw=946&bih=955&dpr=1">
-                <img src='kirby.png' width='300' height=auto title="kirby"></img>
+            <a class="center_lab" href="https://www.google.com/search?q=kirby&client=firefox-b-d&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjC75_c48j6AhVUeN4KHZOUDB0Q_AUoAXoECAIQAw&biw=946&bih=955&dpr=1">
+                <img src='/image/kirby.jpeg' id="img1" width='300' height='300' title="kirby">
             </a>
             <div>
-                <p>
-                    <b style="color: rgb(239, 47, 79); font-size: 20px;">NTUT student</b>
+                <p style="text-align:center">
+                    <b style="color: rgb(239, 47, 79); font-size: 30px;">NTUT student</b>
                     <br>
                     <a href="mailto: t110590001@ntut.org.tw">send mail</a>
                     <br>
@@ -73,32 +49,34 @@
                     <ins>underline</ins>
                 </p>
             </div>
-            <div>
-                <nav>
-                    <ul class="nav">
-                        <li><a href="first.html">111</a></li>
-                        <li><a href="second.html">222</a></li>
-                        <li><a href="child/third.html">333</a></li>
-                        <li><a href="child/grandchild/">444</a></li>
-                        <li><a href="test.html">test</a></li>
-                    </ul>
-                </nav>
-                <ul>
-                    <li style="list-style-type:circle ;">111</li>
-                    <li style="list-style-type:square;">222</li>
-                    <ul>
-                        <li>0.02</li>
-                        <li>0.02</li>
-                    </ul>
-                    <li style="list-style-type:disc;">333</li>
-                </ul>
-            </div>
         </div>
         <div id="secondDivistion" class="division2">
             <bold style="font-size:40px;" class="center_lab" id="section1">Concept and creation</bold>
             <br>
             <hr class="new3">
             <h5>Kirby was created by Masahiro Sakurai as the player character of the 1992 game Kirby's Dream Land (1992). The character's design was intended to serve as placeholder graphics for the game's original protagonist in early development and thus was given a simplistic ball-like appearance. Sakurai switched to the placeholder design for the final character design when he believed that it served the character better.[6] The character was known as Popopo (ポポポ) during development until the name "Kirby" was chosen from a draft list of potential names. Shigeru Miyamoto stated that "Kirby" was chosen in honor of American lawyer John Kirby, who defended Nintendo in the Universal City Studios, Inc. v. Nintendo Co., Ltd. case in 1984 and that the harsh-sounding name contrasted amusingly with the character's cute appearance.[7][8]</h5>
+            <br>
+            <div>
+                <a>
+                    <img src="/image/prac.png">
+                    <img src="/image/prac.png" id="img2">
+                </a>
+            </div>
+            <div>
+                <table class="border">
+                    <thead>
+                        <tr >
+                            <th colspan="2">The table header</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The table body</td>
+                            <td>with two columns</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <br>
             <i class="center_lab" style="font-size: 40px;">italic</i>
             <hr class="new4">
@@ -111,10 +89,10 @@
                     <li>Abilities</li>
                     <li>skills</li>
                 </ol>
-                <ul style="list-style-type:circle;">
-                    <li>Personality</li>
-                    <li>Abilities</li>
-                    <li>skills</li>
+                <ul>
+                    <li style="color:red"><span>Personality</span></li>
+                    <li style="color:blue;"><span>Abilities</span></li>
+                    <li style="color:purple;"><span>skills</span></li>
                 </ul>
             </div>
             <br>

@@ -1,0 +1,70 @@
+/*  CSS  */
+.division1{
+    width:40%;
+    float:left;
+    background-color: #ffb0b0;
+    border-radius: 25px;
+}
+.division2{
+    width:59%;
+    float:right;
+    background-color: #ffb0b0;
+    border-radius: 25px;
+}
+.center_lab{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+hr.new3 {
+    border-top: 1px dotted red;
+}
+hr.new4 {
+    border: 1px solid blueviolet;
+}
+nav a:hover {
+    background-color: #E26868;
+    color: white;
+}
+nav > ul {
+    list-style: none;   /* 移除項目符號 */
+    margin: 0;
+    padding: 0;
+}
+.nav li {
+    display: inline;
+    font-size: 30px;
+    width: 10%;
+}
+li span {
+    color: black;
+    /* Text Color */
+}
+#img1 {
+    border-radius: 50%;
+    object-fit:cover;
+}
+
+#img2 {
+    filter: sepia(100%);
+    -webkit-filter: grayscale(100%z); /* Safari 6.0 - 9.0 */
+    border-width: 2px;
+    border-style: solid;
+}
+
+li a {
+    text-decoration: none;
+    color:rgb(71, 3, 44);
+    border-width: 2px;
+    border-radius: 10%;
+    background-color: #FF8787;
+}
+
+
+table, th, td {
+  border:1px solid black;
+}
+table.border  {
+  border:1px solid black;
+  border-width: thick;
+}
