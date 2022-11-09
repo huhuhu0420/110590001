@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+</style>
+</head>
+<body onload="startGame()">
+<script>
+
+var redGamePiece, blueGamePiece, yellowGamePiece;
+
+function startGame() {
+    redGamePiece = new component(75, 75, "red", 10, 10, 2, 2);
+    yellowGamePiece = new component(75, 75, "yellow", 50, 60,2, 2);    
+    blueGamePiece = new component(75, 75, "blue", 10, 220, 2,-2);
+    myGameArea.start();
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 480;
+        this.canvas.height = 270;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.interval = setInterval(updateGameArea, 20);
+    },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+}
+
+function component(width, height, color, x, y, move_x, move_y) {
+    this.width = width;
+    this.height = height;
+    this.x = x;
+    this.y = y;    
+    this.move_x = move_x;
+    this.move_y = move_y;
+    this.update = function(){
+        ctx = myGameArea.context;
+        ctx.fillStyle = color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+}
+
+function updateGameArea() {
+    myGameArea.clear();
+    if (redGamePiece.x == 400) {
+        redGamePiece.move_x = -2;
+    } 
+    else if (redGamePiece.x == 10) {
+        redGamePiece.move_x = 2;
+    }
+    redGamePiece.x += redGamePiece.move_x;
+    if (yellowGamePiece.x == 400 ) {
+        yellowGamePiece.move_x = -2;
+    }
+    else if (yellowGamePiece.x == 20) {
+        yellowGamePiece.move_x = 2;
+    }
+    if (yellowGamePiece.y == 190 ) {
+        yellowGamePiece.move_y = -2;
+    }
+    else if (yellowGamePiece.y == 10) {
+        yellowGamePiece.move_y = 2;
+    }
+    yellowGamePiece.x += yellowGamePiece.move_x;
+    yellowGamePiece.y += yellowGamePiece.move_y;
+    if (blueGamePiece.x == 400 ) {
+        blueGamePiece.move_x = -2;
+    }
+    else if (blueGamePiece.x == 20) {
+        blueGamePiece.move_x = 2;
+    }
+    if (blueGamePiece.y == 190 ) {
+        blueGamePiece.move_y = -2;
+    }
+    else if (blueGamePiece.y == 10) {
+        blueGamePiece.move_y = 2;
+    }
+    blueGamePiece.x += blueGamePiece.move_x;        
+    blueGamePiece.y += blueGamePiece.move_y;            
+    redGamePiece.update();
+    yellowGamePiece.update();        
+    blueGamePiece.update();
+}
+</script>
+<p>The three components moves by changing the x- and y-coordinates on every update.</p>
+</body>
+</html>
